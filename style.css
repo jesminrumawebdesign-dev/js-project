@@ -1,0 +1,163 @@
+/* Base reset */
+*{box-sizing:border-box;margin:0;padding:0;font-family: "Poppins", Arial, sans-serif}
+html,body{height:100%;background:#f5f7fb;color:#111}
+
+/* ===== Hero ===== */
+.hero-section{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:36px 48px;
+  background:linear-gradient(90deg,#071126 0%,#0f2a44 100%);
+  color:#fff;
+}
+.hero-left img,
+.hero-right img{width:180px;
+  height:auto;
+  border-radius:8px;
+  object-fit:cover;
+  box-shadow:0 8px 24px rgba(2,6,23,0.45)}
+.hero-center{flex:1;
+  text-align:center}
+.hero-center h1{
+  font-size:60px;
+  letter-spacing:0.5px;
+  margin-bottom:8px;
+  font-weight:600;
+  color:blue;
+}
+.hero-center img{display:block;
+  margin:10px auto 6px;
+  width:160px;
+  opacity:0.95}
+.hero-center p{color:rgba(255,255,255,0.9);
+  line-height:1.45;
+  font-size:25px}
+
+/* ===== Main layout ===== */
+.main-container{
+  display:flex;
+  gap:28px;
+  padding:34px 48px;
+  max-width:1200px;
+  margin: -30px auto 40px; /* pull up to overlap hero slightly */
+}
+
+/* Player grid */
+.player-section{
+  flex:1 1 0;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+}
+
+/* Single player card */
+.player-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(15,23,42,0.08);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:12px;
+  transition: transform .22s ease,
+   box-shadow .22s ease;
+}
+.player-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 34px rgba(15,23,42,0.12);
+}
+.player-card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
+}
+.player-card h3{
+  margin:12px 0 10px;
+  font-size:16px;
+  font-weight:600;
+  color:#0b1220;
+}
+.select-btn{
+  background:#f8b118;
+  color:#fff;
+  border:0;
+  padding:8px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  letter-spacing:0.2px;
+  transition: background .18s ease, transform .12s ease;
+}
+.select-btn:hover{
+  
+   background:#162033;
+   transform:translateY(-2px)
+  }
+
+/* ===== Sidebar ===== */
+.sidebar{width:320px;
+  flex:0 0 320px;
+  display:flex;
+  flex-direction:column;
+  gap:18px}
+.box{
+  background:#fff;
+  border-radius:12px;
+  padding:18px;
+  box-shadow:0 8px 20px rgba(2,6,23,0.06);
+}
+.box h3{font-size:18px;margin-bottom:6px;color:#0b1220}
+.box img{display:block;margin:6px 0 12px}
+
+/* Inputs & buttons inside sidebar */
+.box label{display:block;font-weight:600;font-size:13px;margin-top:8px;color:#344155}
+.box input[type="number"]{
+  width:100%;
+  padding:10px 12px;
+  margin-top:6px;
+  border:1px solid #e6e9ef;
+  border-radius:8px;
+  font-size:14px;
+  background:#fbfdff;
+}
+.calc-btn{
+  margin-top:10px;
+  width:100%;
+  padding:11px;
+  border-radius:10px;
+  border:0;
+  cursor:pointer;
+  font-weight:700;
+  letter-spacing:0.3px;
+  background:linear-gradient(90deg,#ff7a18,#ffb200);
+  color:#071126;
+  box-shadow:0 6px 18px rgba(255,122,24,0.14);
+}
+.box h4{margin-top:12px;font-size:16px}
+.box h5{margin-top:8px;font-size:16px}
+
+/* small text placeholders */
+.box p{color:#6b7686;font-size:14px;line-height:1.4;margin-top:8px}
+
+/* ===== Footer ===== */
+footer{
+  text-align:center;
+  padding:18px 12px;
+  background:#071126;
+  color:#dbe9ff;
+  font-size:14px;
+  margin-top:24px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width:1000px){
+  .player-section{grid-template-columns:repeat(2,1fr)}
+  .sidebar{width:300px;flex-basis:300px}
+  .hero-left img,.hero-right img{width:140px}
+  .hero-center h1{font-size:28px;
+  }
+}
